@@ -3,121 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futbol Saytı</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>⚽ Football Game - Gardenscapes Style</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">
-                    <i class="fas fa-futbol"></i>
-                    <span>Futbol Mərkəzi</span>
+    <div class="container">
+        <!-- Header -->
+        <header class="game-header">
+            <h1>⚽ Football Stadium Game</h1>
+            <div class="header-stats">
+                <div class="stat">
+                    <span class="stat-label">Level</span>
+                    <span class="stat-value" id="level">1</span>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#">Ana səhifə</a></li>
-                    <li><a href="#">Xəbərlər</a></li>
-                    <li><a href="#">Nəticələr</a></li>
-                    <li><a href="#">Komandalar</a></li>
-                    <li><a href="#">Cədvəl</a></li>
-                    <li><a href="#">Əlaqə</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+                <div class="stat">
+                    <span class="stat-label">Score</span>
+                    <span class="stat-value" id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Moves</span>
+                    <span class="stat-value" id="moves">15</span>
                 </div>
             </div>
-        </nav>
-    </header>
+        </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Futbolun ən son xəbərləri və nəticələri</h1>
-                <p>Bütün maçlar, statistikalar və analitikalar burada</p>
-                <button class="cta-button">Xəbərlərə bax</button>
+        <!-- Main Game Area -->
+        <main class="game-container">
+            <!-- Game Board -->
+            <div class="game-board-wrapper">
+                <div id="game-board" class="game-board"></div>
             </div>
-        </section>
 
-        <section class="latest-news">
-            <div class="container">
-                <h2>Son Xəbərlər</h2>
-                <div class="news-grid">
-                    <article class="news-card">
-                        <img src="https://via.placeholder.com/300x200?text=Futbol+Xəbəri" alt="Futbol xəbəri">
-                        <div class="news-content">
-                            <h3>Çempionlar Liqasında maraqlı nəticələr</h3>
-                            <p>Bu həftə Çempionlar Liqasında bir neçə sürpriz nəticə oldu...</p>
-                            <span class="date">19 May 2026</span>
-                        </div>
-                    </article>
-                    <article class="news-card">
-                        <img src="https://via.placeholder.com/300x200?text=Transfer+Xəbəri" alt="Transfer xəbəri">
-                        <div class="news-content">
-                            <h3>Yay transfer dövrü başlayır</h3>
-                            <p>Böyük klublar yeni mövsümə hazırlaşarkən transfer planlarını açıqlayır...</p>
-                            <span class="date">18 May 2026</span>
-                        </div>
-                    </article>
-                    <article class="news-card">
-                        <img src="https://via.placeholder.com/300x200?text=Milli+Komanda" alt="Milli komanda">
-                        <div class="news-content">
-                            <h3>Milli komandanın yeni heyəti açıqlandı</h3>
-                            <p>Baş məşqçi növbəti oyunlar üçün yeni oyunçular çağırıb...</p>
-                            <span class="date">17 May 2026</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="live-scores">
-            <div class="container">
-                <h2>Canlı Nəticələr</h2>
-                <div class="scores-container">
-                    <div class="match-card">
-                        <div class="team">
-                            <span class="team-name">Real Madrid</span>
-                            <span class="score">2</span>
-                        </div>
-                        <div class="vs">:</div>
-                        <div class="team">
-                            <span class="score">1</span>
-                            <span class="team-name">Barcelona</span>
-                        </div>
-                        <div class="status">Bitdi</div>
-                    </div>
-                    <div class="match-card">
-                        <div class="team">
-                            <span class="team-name">Manchester City</span>
-                            <span class="score">1</span>
-                        </div>
-                        <div class="vs">:</div>
-                        <div class="team">
-                            <span class="score">0</span>
-                            <span class="team-name">Liverpool</span>
-                        </div>
-                        <div class="status live">45'</div>
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Coins -->
+                <div class="reward-box">
+                    <h3>💰 Coins</h3>
+                    <div class="coin-display">
+                        <span id="coins">0</span> 🪙
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Futbol Mərkəzi. Bütün hüquqlar qorunur.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </footer>
+                <!-- Stadium Level -->
+                <div class="stadium-box">
+                    <h3>🏟️ Stadium Level</h3>
+                    <div class="stadium-level">
+                        <span id="stadium-level">1</span>
+                    </div>
+                    <p class="stadium-progress">Upgrade your stadium with stars!</p>
+                </div>
 
-    <script src="script.js"></script>
+                <!-- Daily Reward -->
+                <div class="daily-box">
+                    <h3>🎁 Daily Reward</h3>
+                    <button class="daily-btn" onclick="game.claimDailyReward()">
+                        Claim 50 Coins
+                    </button>
+                </div>
+
+                <!-- Game Info -->
+                <div class="info-box">
+                    <h4>📋 How to Play:</h4>
+                    <ul>
+                        <li>Swap adjacent tiles</li>
+                        <li>Match 3+ in a row</li>
+                        <li>Score 100+ to pass level</li>
+                        <li>Earn ⭐ for upgrades</li>
+                    </ul>
+                </div>
+
+                <!-- Buttons -->
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="game.resetLevel()">
+                        Reset Level
+                    </button>
+                </div>
+            </aside>
+        </main>
+
+        <!-- Footer -->
+        <footer class="game-footer">
+            <p>🎮 Football Puzzle Game | Made with ❤️</p>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
 </body>
 </html>
